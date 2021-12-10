@@ -1,0 +1,197 @@
+/* Player form */
+figure#audioplayer {
+  border: 20px double #000;
+  background: center,
+  no-repeat,
+   url(highway_to_hell.jpg);
+  background-size: contain;
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  justify-content: center;
+  display: grid;
+  align-items: center;
+  margin: 50px;
+}
+
+/* timer */
+.set_time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(315px,40px);
+  width: 100px;
+  z-index: 2;
+  height: 50px;
+  background: linear-gradient(to right, #fffdf7, #ffffff);
+  border-radius: 10px;
+}
+
+.container_player_items{
+  border: 1px black solid;
+  background-color: white;
+}
+/* timer max */
+.set_time_max {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(544px,55px);
+  width: 70px;
+  height: 40px;
+  text-align: center;
+  z-index: 11;
+  background: linear-gradient(to right, #fffdf7, #ffffff);
+  border-radius: 10px;
+}
+/* buttons */
+#playback {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+}
+#back_button{
+  background-image: url(prev_button.png);
+  background-position: center;
+  background-size:auto;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 50px;
+}
+
+#play_button{
+  background-image: url(button_play.png);
+  background-position: center;
+  background-size:auto;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 50px;
+}
+#pause_button{
+  background-image: url(pause_button.png);
+  background-position: center;
+  background-size:auto;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 50px;
+}
+
+#for_button{
+  background-image: url(next_button.png);
+  background-position: center;
+  background-size:auto;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 50px;
+  
+}
+/* name track */
+#music_name {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, #A8A8A8, #d7d7d7);
+  color: black;
+  border: 1px black solid;
+  z-index: 1;
+  width: 280px;
+  transform: translateX(240px);
+  height: 50px;
+  align-items: center;
+  border-radius: 10px;
+}
+#music_name>span{
+  background-color: rgba(177, 177, 177,.1);
+  border: none;
+}
+
+/* volume */
+#fader {
+  display: flex;
+  justify-content: center;
+}
+#fader{
+  transform: translateY(-50px);
+}
+/* position slider */
+#time_slider{
+  z-index: 1;
+  transform: translate(4%,-104%);
+}
+.forward_player{
+z-index: 2;
+}
+.screen_player{
+  z-index: 1;
+}
+
+.center_div{
+  justify-content: center;
+} 
+.display_button{
+  display:none;
+  z-index: 2;
+  width: 0;
+}
+
+
+.power_play{
+  width: 600px;
+  height: 600px;
+}
+
+/* input range */
+.rs-control .rs-handle {
+    background-color: #288a03;
+}
+
+.sound_control{
+  transform: translate(-310px,35px);
+}
+.range_sound_pos{
+  width: 356px;
+transform: translate(-80px,0px);
+}
+/* la zone de déplacement */
+input{
+  border-radius:50%;
+  height:5px;
+  background: rgb(0, 211, 0);
+}
+input[type=range].custom-slider::-moz-range-track {
+  height: 18px;
+  border: none;
+  border-radius: 40%;
+}
+/* le curseur */
+input[type=range].custom-slider::-moz-range-thumb {
+  width: 15px;
+  height: 30px;                
+  border: 1px solid black;                   
+  /* border-radius: 50%;                */
+  background: green;
+}
+/* barre progression avant */
+input[type=range].custom-slider::-moz-range-progress {
+  height: 5px;
+  background: green;
+  border-radius: 50px;       
+}
+.position_cur_vol{
+  transform: translate(246px,-30px);
+  z-index: 2;
+color: white;
+display: flex;
+justify-content: space-between;
+width: 270px;
+}
+.vol_col{
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 50%;
+}
+.appear{
+
+  z-index: -2;
+  }
+  /* Test: */

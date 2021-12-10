@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- audioplayer -->
+    <article id="power" class="power_play">
+        <figure id="audioplayer" itemprop="track" itemtype="http://schema.org/MusicRecording">
+            <!-- current time -->
+            <div id="time" class="container_player_items set_time appear">
+                <span>00:00</span>
+            </div>
+            <!-- max time -->
+            <div id="time_max" class="container_player_items set_time_max appear">
+                <span>00:00</span>
+            </div>
+            <!-- buttons -->
+            <div class="dock-wrapper appear" id="gameButton">
+                <div id="playback" class="dock center_div">
+                    <div id="back_button" class="forward_player dock-icon"></div>
+                    <div id="play_button" class="forward_player dock-icon"></div>
+                    <div id="pause_button" class="forward_player dock-icon"></div>
+                    <div id="for_button" class="forward_player dock-icon"></div>
+
+                </div>
+            </div>
+            <!-- track -->
+            <figcaption class="screen_player">
+                <div id="music_name">
+                    <span itemprop="name" class="container_player_items name_and_track">Titre - Chanteur - Piste</span>
+                </div>
+            </figcaption>
+
+            <meta itemprop="duration" content="PT2M29S">
+            <!-- volume -->
+            <div id="fader" class="forward_player">
+                <div class="position_cur_vol appear"><span class="vol_col">0%</span><span id="current_volume"
+                        class="vol_col appear"></span><span class="vol_col">100%</span></div>
+                <input type="range" min="0" max="1" step="any" value="1" orient="horizontal" id="volumeSlider"
+                    class="circle-range-select range_sound_pos custom-slider">
+                <img src="./sound_control.png" class="sound_control" alt="represent_volume">
+            </div>
+            <!-- audio flag -->
+            <audio src="sound/AC-DC - Powerage - 07 - Gone Shootin.mp3" id="audiotrack" itemprop="audio"
+                preload="auto"></audio>
+
+        </figure>
+        <!-- time slider -->
+        <div id="time_slider"></div>
+        <!-- clock effect -->
+        <div class="clock">
+            <div class="hand second" data-time-hand></div>
+        </div>
+
+    </article>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
+    <script src="main.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

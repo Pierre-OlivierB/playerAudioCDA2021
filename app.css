@@ -1,0 +1,67 @@
+/* #gameButton(Play, Stop, Next, Prev) => Animation */
+.dock-wrapper {
+    position: absolute;
+    left: 205px;
+    top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.dock {
+    display: flex;
+}
+
+.dock-icon {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center bottom;
+}
+
+html {
+    background:linear-gradient(135deg,#000000, #ffffff);
+    height: 100%;
+}
+body{
+    background-color: transparent;
+}
+
+.dock.animated .dock-icon {
+    transition: .1s;
+    transition-property: transform, transform-origin;
+}
+
+
+/* clock part: */
+
+.clock::after{
+    content:'';
+    position: absolute;
+    background-color: grey;
+    border:1px solid black;
+    width: 15px;
+    height: 15px;
+    top: 322px;
+    left: 316px;
+    transform: translate(-5%, -50%);
+    border-radius: 50%;
+    z-index: 0;
+}
+.clock .hand{
+    --rotation :0;
+    position: absolute;
+    top: 70px;
+    left: 320px;
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    transform: rotate(calc(var(--rotation)*1deg));
+    z-index: 0;
+}
+.clock .hand.second{
+    width: 5px;
+    height: 250px;
+    background-color: grey;
+}
